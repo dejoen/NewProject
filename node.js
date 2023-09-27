@@ -4,7 +4,7 @@ const session=require('express-session')
 const { CyclicSessionStore } = require("@cyclic.sh/session-store");
 const PORT =process.env.PORT || 8080
 const dotevn=require('dotenv').config()
-
+//ruyt
 console.log(process.env.PORT)
 console.log(process.env.CYCLIC_DB)
 const options = {
@@ -36,6 +36,7 @@ app.get("/",(req,res)=>{
    let count =0
   req.session.view=count
    req.session.user='devjoe'
+   console.log(count)
 })
 app.get("/user",(req,res)=>{
   res.send(req.session.user)
