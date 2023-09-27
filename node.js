@@ -1,6 +1,7 @@
 const express= require('express')
 const app =express()
 const session=require('express-session')
+let cookie-parser=require('cookie-parser')
 const { CyclicSessionStore } = require("@cyclic.sh/session-store");
 const PORT =process.env.PORT || 8080
 const dotevn=require('dotenv').config()
@@ -12,10 +13,13 @@ const options = {
     name:"cyclic-long-gold-bee-gear-ap-northeast-2",
   }
 };
-
+app.set('trust proxy', 1) // trust first proxy
 app.use(
   session({
-    resave:false
+    secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
     store: new CyclicSessionStore(options),
     
   })
