@@ -1,15 +1,15 @@
 const express= require('express')
 const app =express()
 const session=require('express-session')
-const {CyclicSessionStore} =require('@cyclic.sh/session-store')
+const { CyclicSessionStore } = require("@cyclic.sh/session-store");
 const PORT =process.env.PORT || 8080
 const dotevn=require('dotenv').config()
 
 console.log(process.env.PORT)
-
+console.log(process.env.CYCLIC_DB)
 const options = {
   table: {
-    name: process.env.CYCLIC_DB,
+    name:"cyclic-long-gold-bee-gear-ap-northeast-2",
   }
 };
 
