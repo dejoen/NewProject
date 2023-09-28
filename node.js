@@ -19,8 +19,8 @@ app.use(
     secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: true }
-    store: new CyclicSessionStore(options),
+  cookie: { secure: true },
+  store: new CyclicSessionStore(options),
     
   })
 );
