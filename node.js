@@ -41,6 +41,7 @@ app.get("/",(req,res)=>{
   req.session.view=count
    req.session.user='devjoe'
    console.log(count)
+   res.send(Date.now())
 })
 app.get("/user",(req,res)=>{
   res.send(req.session.user)
