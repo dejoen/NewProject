@@ -55,7 +55,7 @@ app.get('/user/:id',(req,res,next)=>{
   res.send('regular')
 })
 app.get('/user/:id',(req,res,next)=>{
-  res.send('special'+res.session.user)
+  res.send('special'+req.session.user)
 })
 
 app.listen(PORT,()=>{
