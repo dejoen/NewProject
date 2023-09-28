@@ -10,7 +10,7 @@ console.log(process.env.PORT)
 console.log(process.env.CYCLIC_DB)
 const options = {
   table: {
-    name:"cyclic-long-gold-bee-gear-ap-northeast-2",
+    name:process.env.CYCLIC_DB,
   }
 };
 app.set('trust proxy', 1) // trust first proxy
