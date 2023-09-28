@@ -41,7 +41,7 @@ app.get("/",(req,res)=>{
   req.session.view=count
    req.session.user='devjoe'
    console.log(count)
-   res.send(Date.now())
+   res.send("happy now")
 })
 app.get("/user",(req,res)=>{
   res.send(req.session.user)
@@ -55,7 +55,7 @@ app.get('/user/:id',(req,res,next)=>{
   res.send('regular')
 })
 app.get('/user/:id',(req,res,next)=>{
-  res.send('special')
+  res.send('special'+res.session.user)
 })
 
 app.listen(PORT,()=>{
