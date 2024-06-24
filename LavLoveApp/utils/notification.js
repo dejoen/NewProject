@@ -1,6 +1,6 @@
 let  nodeMailer = require('nodemailer')
 
-
+//notify
 module.exports = async (data)=>{
   console.log("called to send otp")
   let transporter = nodeMailer.createTransport({
