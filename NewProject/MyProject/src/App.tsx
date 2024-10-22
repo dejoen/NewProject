@@ -1,9 +1,8 @@
-import { useState } from 'react'
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <div className="w-full flex flex-col md:flex-row justify-evenly  place-items-center gap-10 bg-gray-100 md:ps-5 md:pe-5">
     <div className="flex gap-5 font-bold">
